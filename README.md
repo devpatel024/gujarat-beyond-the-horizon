@@ -1,5 +1,7 @@
 # Gujarat — Beyond the Horizon
 
+Palette: `#F9E6A8`, `#F2A900`, `#CC6F00`, `#4D2A00`. Natural photography and documentary video retain their original colors.
+
 An independent, responsive travel editorial built with Next.js App Router, TypeScript, Tailwind CSS, React Three Fiber / Drei, GSAP ScrollTrigger and Lenis.
 
 ## Run locally
@@ -25,7 +27,8 @@ The deployable website is in `out/`. It needs no server credentials or external 
 
 - `lib/data.ts`: destination facts and regional itinerary rules.
 - `components/Journey.tsx`: accessible HTML, dialogs, filters, map and local planner.
-- `components/Scene.tsx`: one lazy-loaded procedural canvas evolving through four landscape chapters.
+- `components/Scene.tsx`: one lazy-loaded procedural canvas with instanced geometry, smooth rising/sinking chapter transitions, scroll-driven camera travel, desktop parallax and animated water.
+- `components/VideoChapter.tsx`: intersection-activated Kutch and Garba documentary backgrounds with pause controls, off-screen/hidden-tab pausing and reduced-motion stills.
 - `app/globals.css`: responsive editorial design and print/reduced-motion layouts.
 - `public/art`: original SVG landscape and textile interpretations.
 - `public/photos` and `lib/photo-credits.json`: local Wikimedia photography and source/license records.
@@ -45,3 +48,5 @@ Routes are planning suggestions, not a routing engine. Three-day routes stay clo
 ## Validation
 
 Production build, TypeScript and ESLint checks pass. Tested 24 regional route combinations and interest-sensitive output. Browser checks covered desktop/mobile layouts, category filtering, map selection, dialog Escape/focus restoration, mobile navigation and saved itinerary restoration. Print styling and reduced-motion/WebGL fallbacks are implemented; native printer output and physical mobile GPU performance were not device-tested.
+
+Video credits are listed on the site and in `lib/video-credits.json`. Locally hosted WebM files use Wikimedia’s compact 480p derivatives to keep page weight manageable. Browsers that block autoplay show a play control; unsupported video formats retain the poster. Video source credits retain CC BY-SA 4.0. The project has no tracking or external video embeds.
